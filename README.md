@@ -44,7 +44,7 @@ server {
 If needed, you can manually remove a specific cache file using the following PHP function:
 
 ```php
-function removeNgincCache(string $cache_dir, string $cache_level, string $key){
+function removeNginxCache(string $cache_dir, string $cache_level, string $key){
 
     $hash = md5($key);
     $dir = $cache_dir;
@@ -73,6 +73,6 @@ This function:
 
 ```php
 
-removeNgincCache('/var/cache/nginx/my_app', '1:2', 'GETlocalhost/orders/1');
+removeNginxCache('/var/cache/nginx/my_app', '1:2', 'GETlocalhost/orders/1');
 
 ```
