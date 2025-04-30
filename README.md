@@ -50,10 +50,10 @@ function removeNginxCache(string $cache_dir, string $cache_level, string $key){
     $dir = $cache_dir;
     $levels = explode(':', $cache_level);
 
-    $easrsed_hash = $hash;
+    $erased_hash = $hash;
     foreach ($levels as $level) {
-        $level_dir = substr($easrsed_hash, -$level);
-        $easrsed_hash = substr($easrsed_hash, 0, -$level);
+        $level_dir = substr($erased_hash, -$level);
+        $erased_hash = substr($erased_hash, 0, -$level);
         $dir = $dir . DIRECTORY_SEPARATOR . $level_dir;
     }
 
